@@ -1,0 +1,22 @@
+[
+    {
+        "order": 1,
+        "key": "Username",
+        "label": "Username",
+        "type": "text",
+        "validator": [
+            "required"
+        ],
+        "disable":false
+    },
+    {
+        "order": 2,
+        "key": "Password",
+        "label": "Password",
+        "type": "password",
+        "validator": [
+            "required"
+        ],
+        "disable":false
+    }
+]

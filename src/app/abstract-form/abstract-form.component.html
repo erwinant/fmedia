@@ -1,0 +1,23 @@
+<div *ngIf="fields.length">
+    <form [formGroup]="genForm" (ngSubmit)="formSubmit()" clrForm>
+        <div *ngFor="let f of fields">
+            <div [ngSwitch]="f.type">
+                <clr-input-container *ngSwitchCase="'text'">
+                    <label class="clr-sr-only">{{f.label}}</label>
+                    <input clrInput class="full-width" type="text" [name]="f.key" [placeholder]="f.label" [formControlName]="f.key" />
+                    <clr-control-helper></clr-control-helper>
+                    <clr-control-error>Required</clr-control-error>
+                </clr-input-container>
+                <clr-input-container *ngSwitchCase="'password'">
+                    <label class="clr-sr-only">{{f.label}}</label>
+                    <input clrInput class="full-width" type="password" [name]="f.key" [placeholder]="f.label"
+                        [formControlName]="f.key" />
+                    <clr-control-helper></clr-control-helper>
+                    <clr-control-error>Required</clr-control-error>
+                </clr-input-container>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">{{btnSubmitValue}}</button>
+        <button class="btn btn-primary btn-block" type="reset" *ngIf="resetable">Reset</button>
+    </form>
+</div>
