@@ -1,14 +1,18 @@
-.full-width{
-    width: 100% !important;
+html,
+body {
+  height: 100%;
+}
+.full-width {
+  width: 100% !important;
 }
 
 .clr-col-md-10 {
-    -webkit-box-flex: 0;
-    flex: 0 0 100%;
-    max-width: 100%;
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
-.clr-row{
-    margin-left: 0;
-    margin-right: 0;
+.clr-row {
+  margin-left: 0;
+  margin-right: 0;
 }
